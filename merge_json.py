@@ -9,8 +9,8 @@ def merge_jsonFiles(filename1, filename2, filename3):
             for f1 in infile:
                 with open(filename3, 'a+') as output_file:
                     i = 0
+                    output_file.seek(i, 1)
                     while output_file:
-                        output_file.seek(i)
                         line = output_file.readline()
                         if not line:
                             output_file.write(str(json.loads(f1)))
