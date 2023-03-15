@@ -18,7 +18,6 @@ def merge_jsonFiles(filename1, filename2, filename3):
                             break
                         if not line:
                             output_file.write(str(json.loads(f1)))
-                            output_file.write('\n')
                             break
                         i += output_file.tell()
 
