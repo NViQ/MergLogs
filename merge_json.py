@@ -12,12 +12,13 @@ def merge_jsonFiles(filename1, filename2, filename3):
                     while output_file:
                         output_file.seek(i)
                         line = output_file.readline()
+                        if not line:
+                            output_file.write(str(json.loads(f1)))
+                            output_file.write('\n')
+                            break
                         if json.loads(line).get('timestamp') >= json.loads(f1).get('timestamp'):
                             output_file.write(str(json.loads(f1)).replace('\'', '\"'))
                             output_file.write('\n')
-                            break
-                        if not line:
-                            output_file.write(str(json.loads(f1)))
                             break
                         i += output_file.tell()
 
