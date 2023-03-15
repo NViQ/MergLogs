@@ -2,7 +2,7 @@ import json
 import sys
 
 
-def merge_json(filename1, filename2, filename3):
+def merge_jsonFiles(filename1, filename2, filename3):
     with open(filename1, 'r') as file1, \
             open(filename2, 'r') as file2, \
             open(filename3, 'w+') as output_file:
