@@ -1,6 +1,5 @@
 import json
-import argparse
-from pathlib import Path
+import sys
 
 
 def merge_json(filename1, filename2, filename3):
